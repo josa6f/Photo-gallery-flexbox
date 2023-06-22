@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box; /*para que el elemento de la caja no se haga mas grande si se pone un relleno o un margen*/
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+}
+
+.header{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+
+
+}
+
+.gallery{ 
+    display: flex; /*se le realiza al padre de los elementos, y los hijos se hacen flex*/
+    flex-direction: row; /*Para que los hijos vayan de fila row o en coolumna colum*/
+    flex-wrap: wrap; /*hace que si un hijo ya no cabe en la fila, lo pase para la siguiente, o en su caso en la columna*/
+    justify-content: center; /*determina como se posicionan los hijos dentro del contenedor padre*/
+    align-items: center; /*pocisiona el contenido a lo largo del eje*/
+    padding: 20px 10px; /*arriba y abajo 20px y 10 izquierda y derecha*/
+    max-width: 1400px;
+    margin: 0 auto; /*cero arriba y abajo y auto que es centrado horizontalmente*/
+}
+
+.gallery img{
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+}
