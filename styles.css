@@ -28,10 +28,18 @@ body{
     padding: 20px 10px; /*arriba y abajo 20px y 10 izquierda y derecha*/
     max-width: 1400px;
     margin: 0 auto; /*cero arriba y abajo y auto que es centrado horizontalmente*/
+    gap: 16px; /*se le aplican espacios entre columnas y filas y se le aplica al elemento padre*/
 }
 
 .gallery img{
     width: 100%;
     max-width: 350px;
     height: 300px;
+    object-fit: cover; /*hace un recorte de la imagen y la ajusta en img*/
+    border-radius: 10px;
+}
+
+.gallery::after{ /*crea un elemento hijo al final  y este es agregado con un elemento vacio, para que cuando sean dos columnas, el ultimo se ponga a la izquierda y no al centro por el justify-content: center*/
+    content: "";
+    width: 350px;
 }
